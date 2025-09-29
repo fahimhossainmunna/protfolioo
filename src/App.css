@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+
+@theme {
+  --font-fahim: "Poppins", sans-serif; 
+  --font-munna: "DM Sans", sans-serif; 
+}
