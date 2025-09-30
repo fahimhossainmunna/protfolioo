@@ -48,7 +48,15 @@ const About = () => {
                 transition={{ duration: 0.3 }}
                 className="p-6 ml-8 bg-[#181818] rounded-2xl w-[420px] hover:shadow-[0_0_25px_#38bdf8]"
               >
-                <Image imgSrc={fOne} />
+                {/* Image hover effect only on image */}
+                <motion.div
+                  whileHover={{ scale: 1.15 }}
+                  transition={{ duration: 0.4 }}
+                  className="inline-block"
+                >
+                  <Image imgSrc={fOne} />
+                </motion.div>
+
                 <h3 className="text-[20px] font-extrabold font-fahim py-3">
                   Learning & Growth
                 </h3>
@@ -65,7 +73,15 @@ const About = () => {
                 transition={{ duration: 0.3 }}
                 className="p-6 ml-35 bg-[#181818] rounded-2xl w-[420px] hover:shadow-[0_0_25px_#34d399]"
               >
-                <Image imgSrc={fTwo} />
+                {/* Image hover effect only on image */}
+                <motion.div
+                  whileHover={{ scale: 1.15 }}
+                  transition={{ duration: 0.4 }}
+                  className="inline-block"
+                >
+                  <Image imgSrc={fTwo} />
+                </motion.div>
+
                 <h3 className="text-[20px] font-extrabold font-fahim py-3">
                   Hands-on Practice
                 </h3>
@@ -82,7 +98,14 @@ const About = () => {
                 transition={{ duration: 0.3 }}
                 className="p-6 ml-8 bg-[#181818] rounded-2xl w-[420px] hover:shadow-[0_0_25px_#facc15]"
               >
-                <Image imgSrc={fthree} />
+                <motion.div
+                  whileHover={{ scale: 1.15 }}
+                  transition={{ duration: 0.4 }}
+                  className="inline-block"
+                >
+                  <Image imgSrc={fthree} />
+                </motion.div>
+
                 <h3 className="text-[20px] font-extrabold font-fahim py-3">
                   Creative Exploration
                 </h3>
@@ -98,7 +121,14 @@ const About = () => {
                 transition={{ duration: 0.3 }}
                 className="p-6 ml-35 bg-[#181818] rounded-2xl w-[420px] hover:shadow-[0_0_25px_#8b5cf6]"
               >
-                <Image imgSrc={ffour} />
+                <motion.div
+                  whileHover={{ scale: 1.15 }}
+                  transition={{ duration: 0.4 }}
+                  className="inline-block"
+                >
+                  <Image imgSrc={ffour} />
+                </motion.div>
+
                 <h3 className="text-[20px] font-extrabold font-fahim py-3">
                   Future Goals
                 </h3>
