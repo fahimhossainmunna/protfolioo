@@ -17,7 +17,7 @@ const About = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true }}
       id="about"
-      className="py-20 bg-gradient-to-r from-[#141e34] via-[#121c33] to-[#0f172a] text-white"
+      className="pt-20 bg-gradient-to-r from-[#141e34] via-[#121c33] to-[#0f172a] text-white"
     >
       <Container>
         {/* Heading */}
@@ -149,11 +149,13 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, ease: "easeOut" }}
               viewport={{ once: false, amount: 0.2 }}
-              className="w-[250px] sm:w-[300px] md:w-[380px] lg:w-[450px] h-auto rounded-2xl object-cover shadow-lg mt-5"
+              className="w-[250px] sm:w-[300px] md:w-[380px] lg:w-[450px] h-auto rounded-2xl object-cover shadow-lg mt-8"
             />
           </div>
         </Flex>
+        <div className="border-b border-b-cyan-300 mt-15 ml-10"></div>
       </Container>
+      
     </motion.div>
   );
 };

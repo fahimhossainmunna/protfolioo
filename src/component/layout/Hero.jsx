@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Container from "../common/Container";
 import Flex from "../common/Flex";
 import Image from "../common/Image";
-import fahim from "/src/assets/favatar.png";
+import fmunna from "/src/assets/fahimh.jpg";
 
 // Reusable button
 const CustomButton = ({ text, href, onClick, className }) => {
@@ -72,9 +72,22 @@ const Hero = () => {
             </div>
 
             {/* Right side image */}
-            <div className="w-[250px] sm:w-[300px] md:w-[400px] lg:w-[450px] flex justify-center lg:justify-end">
-              <Image imgSrc={fahim} className="w-full object-contain" />
-            </div>
+            {/* Profile Image */}
+            <motion.div
+    initial={{ opacity: 0, scale: 0.9 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.6, ease: "easeOut" }}
+    viewport={{ once: true }}
+    className="flex-1 flex justify-center items-center -mr-10 mt-10"
+  >
+    <div className="relative group">
+      <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 animate-spin-slow"></div>
+      <div className="relative w-100 h-100 rounded-full overflow-hidden border-4 border-white shadow-[0_0_50px_rgba(124,58,237,0.6)] group-hover:scale-105 transition duration-500">
+        <Image imgSrc={fmunna} />
+      </div>
+    </div>
+  </motion.div>
+
           </Flex>
         </div>
       </motion.section>
