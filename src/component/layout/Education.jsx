@@ -10,21 +10,21 @@ const Education = () => {
     {
       year: "2022 - Present",
       degree: "B.Sc in Computer Science",
-      institution: "XYZ University",
+      institution: "Dhaka International University",
       description:
         "Currently pursuing a Bachelor's degree in Computer Science with a focus on frontend technologies and modern web development.",
     },
     {
       year: "2019 - 2021",
       degree: "Higher Secondary Certificate (HSC)",
-      institution: "ABC College",
+      institution: "Govt. Shaheed Suhrawardy College, Dhaka",
       description:
         "Completed HSC in Science group with a strong emphasis on Mathematics and Computer studies.",
     },
     {
       year: "2017 - 2019",
       degree: "Secondary School Certificate (SSC)",
-      institution: "ABC High School",
+      institution: "Lalbagh Govt. Model School And College",
       description:
         "Completed secondary education in Science stream with good academic performance.",
     },
