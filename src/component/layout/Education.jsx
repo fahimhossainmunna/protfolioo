@@ -31,10 +31,10 @@ const Education = () => {
   ];
 
   return (
-    <section
-      id="education"
-      className="py-16 bg-[#0f172a] text-white"
-    >
+   <section
+  id="education"
+  className="py-16 bg-gradient-to-br from-[#0a0f1f] via-[#1a103d] to-[#0a0a0a] text-white"
+>
       <Container>
         {/* Heading */}
         <motion.div
