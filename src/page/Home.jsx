@@ -6,6 +6,7 @@ import GetInTouch from "../component/layout/GetInTouch";
 import Hero from "../component/layout/Hero";
 import Skills from "../component/layout/Skills";
 import Services from "../component/layout/Services";
+import MyProject from "../component/layout/MyProject";
 
 const Home = () => {
   return (
@@ -28,6 +29,10 @@ const Home = () => {
 
       <Element name="education">
         <Education />
+      </Element>
+
+      <Element name="myProject">
+        <MyProject/>
       </Element>
 
       <Element name="getintouch">

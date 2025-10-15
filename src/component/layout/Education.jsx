@@ -9,24 +9,24 @@ const Education = () => {
   const educationData = [
     {
       year: "2022 - Present",
-      degree: "B.Sc in Computer Science",
+      degree: "B.Sc in Business Statistics",
       institution: "Dhaka International University",
       description:
-        "Currently pursuing a Bachelor's degree in Computer Science with a focus on frontend technologies and modern web development.",
+        "Currently pursuing a Bachelor’s degree in Business Statistics with a focus on data analysis, applied mathematics, and business insights.",
     },
     {
       year: "2019 - 2021",
       degree: "Higher Secondary Certificate (HSC)",
       institution: "Govt. Shaheed Suhrawardy College, Dhaka",
       description:
-        "Completed HSC in Science group with a strong emphasis on Mathematics and Computer studies.",
+        "Completed HSC in Business Studies group with emphasis on Accounting, Finance, and Statistics.",
     },
     {
       year: "2017 - 2019",
       degree: "Secondary School Certificate (SSC)",
       institution: "Lalbagh Govt. Model School And College",
       description:
-        "Completed secondary education in Science stream with good academic performance.",
+        "Completed SSC in Business Studies group with good academic performance and strong analytical skills.",
     },
   ];
 

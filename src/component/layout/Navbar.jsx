@@ -8,8 +8,12 @@ import {
   FaCode,
   FaGraduationCap,
   FaDownload,
-  FaServer
+  FaServer,
+  FaProjectDiagram 
 } from "react-icons/fa";
+import { RiFolderChartLine } from "react-icons/ri";
+
+
 import logoo from "../../assets/fologoo.png";
 import Container from "../common/Container";
 import Flex from "../common/Flex";
@@ -50,6 +54,7 @@ const Navbar = () => {
     { id: "services", label: "Services", icon: <FaServer /> },
     { id: "skills", label: "Skills", icon: <FaCode /> },
     { id: "education", label: "Education", icon: <FaGraduationCap /> },
+    { id: "myProject", label: "MyProject", icon: <RiFolderChartLine  /> },
   ];
 
   return (

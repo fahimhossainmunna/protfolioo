@@ -77,7 +77,7 @@ const Hero = () => {
                 <CustomButton
                   text="Download CV"
                   icon={FaDownload}
-                  href="/Fahim-CV.pdf"
+                  href="/Fahim_CV.pdf"
                 />
               </div>
             </div>
