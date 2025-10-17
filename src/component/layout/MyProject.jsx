@@ -1,41 +1,268 @@
-import React from "react";
-import { FaProjectDiagram } from "react-icons/fa"; // icon import
+import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-const MyProject = () => {
-  const projects = [
-    {
-      name: "My Portfolio Website",
-      description: "A personal portfolio built with React and Tailwind CSS.",
-    },
-    {
-      name: "E-commerce App",
-      description: "A simple shopping cart app built with React and Firebase.",
-    },
-    {
-      name: "Blog Platform",
-      description: "A markdown based blog platform built with Next.js.",
-    },
+const projectsData = [
+  {
+    id: 1,
+    title: "SmartShop – Responsive E-Commerce Website",
+    description:
+      "A React.js based website demonstrating interactive product displays, responsive design, and smooth user experience.",
+    tags: ["React Js", "All"],
+    image: "/src/assets/orebi.png",
+    liveDemoLink: "https://react-orebi-tau.vercel.app/",
+    githubLink: "https://github.com/fahimhossainmunna/reactOrebi",
+  },
+  {
+    id: 11,
+    title: "Shakib Protostar – Responsive Portfolio Website",
+    description:
+      "A React.js based website demonstrating interactive product displays, responsive design, and smooth user experience.",
+    tags: ["React Js", "All"],
+    image: "/src/assets/protostarr.png",
+    liveDemoLink: "https://react-orebi-tau.vercel.app/",
+    githubLink: "https://github.com/fahimhossainmunna/reactOrebi",
+  },
+  {
+    id: 12,
+    title: "UOMO – Responsive Fashion Website",
+    description:
+      "A React.js based website demonstrating interactive product displays, responsive design, and smooth user experience.",
+    tags: ["React Js", "All"],
+    image: "/src/assets/umo.png",
+    liveDemoLink: "https://uomo-react-weld.vercel.app/",
+    githubLink: "https://github.com/fahimhossainmunna/uomoReact",
+  },
+  {
+    id: 13,
+    title: "Exclusive – Responsive Gadgets Website",
+    description:
+      "A React.js based website demonstrating interactive product displays, responsive design, and smooth user experience.",
+    tags: ["React Js", "All"],
+    image: "/src/assets/appletham.png",
+    liveDemoLink: "https://raact-ecom.vercel.app/",
+    githubLink: "https://github.com/fahimhossainmunna/raactEcom",
+  },
+  {
+    id: 14,
+    title: "HANCOK – Responsive Gaming Website",
+    description:
+      "A React.js based website demonstrating interactive product displays, responsive design, and smooth user experience.",
+    tags: ["React Js", "All"],
+    image: "/src/assets/hancok.png",
+    liveDemoLink: "https://hancok-beta.vercel.app/",
+    githubLink: "https://github.com/fahimhossainmunna/hancok",
+  },
+  {
+    id: 2,
+    title: "Developer Portfolio – Tailwind CSS Responsive Design",
+    description:
+      "A modern and responsive portfolio website built with Tailwind CSS, showcasing clean layouts, smooth UI, and adaptive design for all devices.",
+    tags: ["Tailwind", "All"],
+    image: "/src/assets/developer.png",
+    liveDemoLink: "https://fahimhossainmunna.github.io/Developer-Protfolio/",
+    githubLink: "https://github.com/fahimhossainmunna/Developer-Protfolio",
+  },
+  {
+    id: 3,
+    title: "Agency – HTML CSS Responsive Design",
+    description:
+      "A modern and responsive portfolio website built with HTML CSS, showcasing clean layouts, smooth UI, and adaptive design for all devices.",
+    tags: ["html css", "All"],
+    image: "/src/assets/figma.png",
+    liveDemoLink: "https://fahimhossainmunna.github.io/figmaa/",
+    githubLink: "https://github.com/fahimhossainmunna/figmaa",
+  },
+  {
+    id: 4,
+    title: "Personal Blog - Built with Bootstrap",
+    description:
+      "A blog platform developed using Bootstrap, ensuring a fully responsive layout and user-friendly interface.",
+    tags: ["Bootstrap", "All"],
+    image: "/src/assets/projectOne.png",
+    liveDemoLink: "https://fahimhossainmunna.github.io/creativePixel/",
+    githubLink: "https://github.com/fahimhossainmunna/creativePixel",
+  },
+  {
+    id: 5,
+    title: "Personal Blog - Built with Bootstrap",
+    description:
+      "A blog platform developed using Bootstrap, ensuring a fully responsive layout and user-friendly interface.",
+    tags: ["Bootstrap", "All"],
+    image: "/src/assets/shakib.png",
+    liveDemoLink: "https://fahimhossainmunna.github.io/protostar/",
+    githubLink: "https://github.com/fahimhossainmunna/protostar",
+  },
+  {
+    id: 6,
+    title: "Personal Blog - Built with Bootstrap",
+    description:
+      "A blog platform developed using Bootstrap, ensuring a fully responsive layout and user-friendly interface.",
+    tags: ["Bootstrap", "All"],
+    image: "/src/assets/glidex.png",
+    liveDemoLink: "https://fahimhossainmunna.github.io/Glidex/",
+    githubLink: "https://github.com/fahimhossainmunna/Glidex",
+  },
+];
+
+const Projects = () => {
+  const [activeFilter, setActiveFilter] = useState("All");
+  const filterButtons = [
+    "All",
+    "html css",
+    "Bootstrap",
+    "Tailwind",
+    "React Js",
+    "JavaScript",
   ];
 
+  const filteredProjects = projectsData.filter((project) =>
+    project.tags.includes(activeFilter)
+  );
+
   return (
-    <div className="p-6 bg-gray-900 text-white min-h-screen">
-      <div className="flex items-center gap-2 mb-6">
-        <FaProjectDiagram className="text-pink-500 text-3xl" />
-        <h2 className="text-2xl font-bold">My Projects</h2>
-      </div>
-      <ul className="space-y-4">
-        {projects.map((project, index) => (
-          <li
-            key={index}
-            className="p-4 border border-gray-700 rounded-lg hover:bg-gray-800 transition"
+    <section className="py-20 md:py-28 bg-gradient-to-br from-[#0b0f2c] via-[#20133a] to-[#2b0f46] text-white relative overflow-hidden">
+      {/* gradient aura background */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,0,255,0.1),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(0,255,255,0.08),transparent_60%)]" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="flex flex-col md:flex-row md:items-center justify-between mb-10 md:mb-12">
+          <div className="text-left mb-6 md:mb-0">
+            <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent mb-3">
+              My Projects
+            </h2>
+            <p className="text-lg text-gray-300">
+              A few projects I have built while learning front-end development.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-2 md:gap-3 justify-start md:justify-end">
+            {filterButtons.map((filter) => (
+              <button
+                key={filter}
+                onClick={() => setActiveFilter(filter)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition duration-200 ease-in-out backdrop-blur-md border
+                ${
+                  activeFilter === filter
+                    ? "bg-gradient-to-r from-fuchsia-600 to-cyan-500 text-white shadow-lg shadow-fuchsia-500/30 border-transparent scale-105"
+                    : "bg-white/10 text-gray-300 border-white/20 hover:bg-white/20"
+                }`}
+              >
+                {filter}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* ✅ Swiper Slider with external arrows + glowing dots */}
+        <div className="relative flex items-center">
+          {/* left arrow (outside) */}
+          <button className="custom-prev absolute -left-10 md:-left-16 top-1/2 -translate-y-1/2 z-20 bg-gradient-to-r from-purple-600 to-pink-500 p-4 rounded-full shadow-lg shadow-purple-500/30 hover:shadow-pink-500/50 hover:scale-110 transition">
+            ❮
+          </button>
+
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={30}
+            slidesPerView={1}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            pagination={{
+              clickable: true,
+              el: ".custom-pagination",
+            }}
+            navigation={{
+              nextEl: ".custom-next",
+              prevEl: ".custom-prev",
+            }}
+            breakpoints={{
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            className="mySwiper w-full"
           >
-            <h3 className="text-xl font-semibold">{project.name}</h3>
-            <p className="text-gray-300">{project.description}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
+            {filteredProjects.map((project) => (
+              <SwiperSlide key={project.id}>
+                <div className="bg-[#12142a]/80 border border-white/10 shadow-lg shadow-purple-800/20 rounded-xl p-5 flex flex-col justify-between transition-transform duration-300 hover:shadow-pink-500/30 hover:scale-[1.03] w-full max-w-md mx-auto backdrop-blur-sm">
+                  <div>
+                    <div className="h-48 overflow-hidden rounded-lg mb-4 bg-gray-800 flex items-center justify-center">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-400 mb-6 flex-grow text-base">
+                      {project.description}
+                    </p>
+                  </div>
+
+                  <div className="flex gap-3 pt-4 border-t border-white/10">
+                    <a
+                      href={project.liveDemoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-6 py-2 bg-gradient-to-r from-green-500 to-teal-400 text-white font-semibold rounded-lg shadow-md hover:shadow-teal-500/40 transition duration-150 text-sm flex-1 text-center"
+                    >
+                      Live Demo
+                    </a>
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-6 py-2 bg-gradient-to-r from-gray-700 to-gray-900 text-white font-semibold rounded-lg shadow-md hover:shadow-gray-500/30 transition duration-150 text-sm flex-1 text-center"
+                    >
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* right arrow (outside) */}
+          <button className="custom-next absolute -right-10 md:-right-16 top-1/2 -translate-y-1/2 z-20 bg-gradient-to-r from-cyan-500 to-purple-600 p-4 rounded-full shadow-lg shadow-cyan-500/30 hover:shadow-purple-500/50 hover:scale-110 transition">
+            ❯
+          </button>
+        </div>
+
+        {/* ✅ Animated Pagination Dots */}
+        <div className="custom-pagination flex justify-center mt-12 gap-3">
+          {/* Swiper injects dots here */}
+        </div>
+
+        {/* Dot glow animation */}
+        <style>
+          {`
+          .swiper-pagination-bullet {
+            background: linear-gradient(90deg, #a855f7, #06b6d4);
+            opacity: 0.4;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+          }
+          .swiper-pagination-bullet-active {
+            opacity: 1;
+            box-shadow: 0 0 10px #f0abfc, 0 0 20px #22d3ee;
+            transform: scale(1.3);
+            animation: pulse 1.2s infinite alternate;
+          }
+          @keyframes pulse {
+            from { box-shadow: 0 0 10px #f0abfc; }
+            to { box-shadow: 0 0 25px #22d3ee; }
+          }
+          `}
+        </style>
+      </div>
+    </section>
   );
 };
 
-export default MyProject;
+export default Projects;
