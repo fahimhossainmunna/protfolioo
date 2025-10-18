@@ -20,9 +20,9 @@ import glidex from "/src/assets/glidex.png";
 const projectsData = [
   {
     id: 1,
-    title: "SmartShop – Responsive E-Commerce Website",
+    title: "SmartShop – Modern E-Commerce Experience",
     description:
-      "A React.js based website demonstrating interactive product displays, responsive design, and smooth user experience.",
+      "A fully responsive React-based online shopping platform featuring dynamic product filtering, smooth navigation, and a premium user experience.",
     tags: ["React Js", "All"],
     image: orebi,
     liveDemoLink: "https://react-orebi-tau.vercel.app/",
@@ -30,9 +30,9 @@ const projectsData = [
   },
   {
     id: 11,
-    title: "Shakib Protostar – Responsive Portfolio Website",
+    title: "Protostar – Personal Portfolio Showcase",
     description:
-      "A React.js based website demonstrating interactive product displays, responsive design, and smooth user experience.",
+      "A modern portfolio website built with React showcasing professional projects, animation, and elegant responsive layouts.",
     tags: ["React Js", "All"],
     image: protostarr,
     liveDemoLink: "https://react-orebi-tau.vercel.app/",
@@ -40,9 +40,9 @@ const projectsData = [
   },
   {
     id: 12,
-    title: "UOMO – Responsive Fashion Website",
+    title: "UOMO – Fashion & Lifestyle Store",
     description:
-      "A React.js based website demonstrating interactive product displays, responsive design, and smooth user experience.",
+      "A stylish React fashion website with interactive product sections, minimal UI, and smooth category transitions for all devices.",
     tags: ["React Js", "All"],
     image: umo,
     liveDemoLink: "https://uomo-react-weld.vercel.app/",
@@ -50,9 +50,9 @@ const projectsData = [
   },
   {
     id: 13,
-    title: "Exclusive – Responsive Gadgets Website",
+    title: "Exclusive – Smart Gadget Store",
     description:
-      "A React.js based website demonstrating interactive product displays, responsive design, and smooth user experience.",
+      "A feature-rich React e-commerce site offering seamless browsing, category filtering, and mobile-optimized performance.",
     tags: ["React Js", "All"],
     image: appletham,
     liveDemoLink: "https://raact-ecom.vercel.app/",
@@ -60,9 +60,9 @@ const projectsData = [
   },
   {
     id: 14,
-    title: "HANCOK – Responsive Gaming Website",
+    title: "HANCOK – Gaming Community Website",
     description:
-      "A React.js based website demonstrating interactive product displays, responsive design, and smooth user experience.",
+      "A responsive gaming-themed site built with React and Tailwind CSS, showcasing dark aesthetics and high-performance design.",
     tags: ["React Js", "All"],
     image: hancok,
     liveDemoLink: "https://hancok-beta.vercel.app/",
@@ -70,9 +70,9 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Developer Portfolio – Tailwind CSS Responsive Design",
+    title: "Developer Portfolio – Modern UI Design",
     description:
-      "A modern and responsive portfolio website built with Tailwind CSS, showcasing clean layouts, smooth UI, and adaptive design for all devices.",
+      "A clean, fast, and mobile-friendly developer portfolio built with Tailwind CSS to highlight skills and projects efficiently.",
     tags: ["Tailwind", "All"],
     image: developer,
     liveDemoLink: "https://fahimhossainmunna.github.io/Developer-Protfolio/",
@@ -80,9 +80,9 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "Agency – HTML CSS Responsive Design",
+    title: "Agency – Digital Design Landing Page",
     description:
-      "A modern and responsive portfolio website built with HTML CSS, showcasing clean layouts, smooth UI, and adaptive design for all devices.",
+      "A creative, responsive HTML & CSS landing page for a digital agency with modern animations and a professional layout.",
     tags: ["html css", "All"],
     image: figma,
     liveDemoLink: "https://fahimhossainmunna.github.io/figmaa/",
@@ -90,9 +90,9 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "Personal Blog - Built with Bootstrap",
+    title: "Creative Pixel – Personal Blog Website",
     description:
-      "A blog platform developed using Bootstrap, ensuring a fully responsive layout and user-friendly interface.",
+      "A Bootstrap-based personal blog platform built with elegant UI, clean typography, and a fully responsive structure.",
     tags: ["Bootstrap", "All"],
     image: projectOne,
     liveDemoLink: "https://fahimhossainmunna.github.io/creativePixel/",
@@ -100,9 +100,9 @@ const projectsData = [
   },
   {
     id: 5,
-    title: "Personal Blog - Built with Bootstrap",
+    title: "Protostar – Portfolio Template",
     description:
-      "A blog platform developed using Bootstrap, ensuring a fully responsive layout and user-friendly interface.",
+      "A Bootstrap-based portfolio website template with smooth scrolling, vibrant color palette, and responsive design.",
     tags: ["Bootstrap", "All"],
     image: shakib,
     liveDemoLink: "https://fahimhossainmunna.github.io/protostar/",
@@ -110,9 +110,9 @@ const projectsData = [
   },
   {
     id: 6,
-    title: "Personal Blog - Built with Bootstrap",
+    title: "Glidex – Multipurpose Landing Page",
     description:
-      "A blog platform developed using Bootstrap, ensuring a fully responsive layout and user-friendly interface.",
+      "A Bootstrap landing page built for startups and creative teams featuring flexible layouts and interactive sections.",
     tags: ["Bootstrap", "All"],
     image: glidex,
     liveDemoLink: "https://fahimhossainmunna.github.io/Glidex/",
@@ -136,23 +136,24 @@ const Projects = () => {
   );
 
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-br from-[#0b0f2c] via-[#20133a] to-[#2b0f46] text-white relative overflow-hidden">
+    <section className="pt-1 pb-20 md:pt-28 md:pb-28 bg-gradient-to-br from-[#0b0f2c] via-[#20133a] to-[#2b0f46] text-white relative overflow-hidden">
       {/* gradient aura background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,0,255,0.1),transparent_60%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(0,255,255,0.08),transparent_60%)]" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto py-5 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col md:flex-row md:items-center justify-between mb-10 md:mb-12">
           <div className="text-left mb-6 md:mb-0">
-            <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent mb-3">
+            <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent mb-3 leading-tight break-words ">
               My Projects
             </h2>
-            <p className="text-lg text-gray-300">
-              A few projects I have built while learning front-end development.
+            <p className="text-[16px] text-gray-300">
+              A collection of my recent front-end projects built with passion
+              and precision.
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-2 md:gap-3 justify-start md:justify-end">
+          <div className="flex flex-wrap  gap-2 md:gap-3 justify-start md:justify-end">
             {filterButtons.map((filter) => (
               <button
                 key={filter}
@@ -170,9 +171,8 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* ✅ Swiper Slider with external arrows + glowing dots */}
+        {/* ✅ Swiper Slider */}
         <div className="relative flex items-center">
-          {/* left arrow (outside) */}
           <button className="custom-prev absolute -left-10 md:-left-16 top-1/2 -translate-y-1/2 z-20 bg-gradient-to-r from-purple-600 to-pink-500 p-4 rounded-full shadow-lg shadow-purple-500/30 hover:shadow-pink-500/50 hover:scale-110 transition">
             ❮
           </button>
@@ -198,19 +198,22 @@ const Projects = () => {
           >
             {filteredProjects.map((project) => (
               <SwiperSlide key={project.id}>
-                <div className="bg-[#12142a]/80 border border-white/10 shadow-lg shadow-purple-800/20 rounded-xl p-5 flex flex-col justify-between transition-transform duration-300 hover:shadow-pink-500/30 hover:scale-[1.03] w-full max-w-md mx-auto backdrop-blur-sm">
-                  <div>
-                    <div className="h-48 overflow-hidden rounded-lg mb-4 bg-gray-800 flex items-center justify-center">
+                <div className="bg-[#12142a]/80 border m-5 border-white/10 shadow-lg shadow-purple-800/20 rounded-xl p-5 flex flex-col justify-between h-[500px] transition-all duration-300 hover:shadow-pink-500/30 hover:-translate-y-2 w-full max-w-md mx-auto backdrop-blur-sm">
+                  <div className="flex flex-col flex-grow ">
+                  
+                    <div className="h-48 overflow-hidden rounded-lg mb-4 bg-gray-800 flex items-center justify-center relative group">
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                        className="w-full h-full object-cover transition-transform duration-700 ease-out transform origin-center group-hover:scale-110"
                       />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500"></div>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2">
+
+                    <h3 className="text-xl font-bold text-white mb-2 line-clamp-2">
                       {project.title}
                     </h3>
-                    <p className="text-gray-400 mb-6 flex-grow text-base">
+                    <p className="text-gray-400 mt-5 flex-grow text-base line-clamp-3">
                       {project.description}
                     </p>
                   </div>
@@ -238,16 +241,13 @@ const Projects = () => {
             ))}
           </Swiper>
 
-          {/* right arrow (outside) */}
           <button className="custom-next absolute -right-10 md:-right-16 top-1/2 -translate-y-1/2 z-20 bg-gradient-to-r from-cyan-500 to-purple-600 p-4 rounded-full shadow-lg shadow-cyan-500/30 hover:shadow-purple-500/50 hover:scale-110 transition">
             ❯
           </button>
         </div>
 
-        {/* ✅ Animated Pagination Dots */}
         <div className="custom-pagination flex justify-center mt-12 gap-3"></div>
 
-        {/* Dot glow animation */}
         <style>
           {`
           .swiper-pagination-bullet {
