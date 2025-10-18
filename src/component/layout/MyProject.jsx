@@ -5,6 +5,18 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+// ✅ Import all images
+import orebi from "/src/assets/orebi.png";
+import protostarr from "/src/assets/protostarr.png";
+import umo from "/src/assets/umo.png";
+import appletham from "/src/assets/appletham.png";
+import hancok from "/src/assets/hancok.png";
+import developer from "/src/assets/developer.png";
+import figma from "/src/assets/figma.png";
+import projectOne from "/src/assets/projectOne.png";
+import shakib from "/src/assets/shakib.png";
+import glidex from "/src/assets/glidex.png";
+
 const projectsData = [
   {
     id: 1,
@@ -12,7 +24,7 @@ const projectsData = [
     description:
       "A React.js based website demonstrating interactive product displays, responsive design, and smooth user experience.",
     tags: ["React Js", "All"],
-    image: "/src/assets/orebi.png",
+    image: orebi,
     liveDemoLink: "https://react-orebi-tau.vercel.app/",
     githubLink: "https://github.com/fahimhossainmunna/reactOrebi",
   },
@@ -22,7 +34,7 @@ const projectsData = [
     description:
       "A React.js based website demonstrating interactive product displays, responsive design, and smooth user experience.",
     tags: ["React Js", "All"],
-    image: "/src/assets/protostarr.png",
+    image: protostarr,
     liveDemoLink: "https://react-orebi-tau.vercel.app/",
     githubLink: "https://github.com/fahimhossainmunna/reactOrebi",
   },
@@ -32,7 +44,7 @@ const projectsData = [
     description:
       "A React.js based website demonstrating interactive product displays, responsive design, and smooth user experience.",
     tags: ["React Js", "All"],
-    image: "/src/assets/umo.png",
+    image: umo,
     liveDemoLink: "https://uomo-react-weld.vercel.app/",
     githubLink: "https://github.com/fahimhossainmunna/uomoReact",
   },
@@ -42,7 +54,7 @@ const projectsData = [
     description:
       "A React.js based website demonstrating interactive product displays, responsive design, and smooth user experience.",
     tags: ["React Js", "All"],
-    image: "/src/assets/appletham.png",
+    image: appletham,
     liveDemoLink: "https://raact-ecom.vercel.app/",
     githubLink: "https://github.com/fahimhossainmunna/raactEcom",
   },
@@ -52,7 +64,7 @@ const projectsData = [
     description:
       "A React.js based website demonstrating interactive product displays, responsive design, and smooth user experience.",
     tags: ["React Js", "All"],
-    image: "/src/assets/hancok.png",
+    image: hancok,
     liveDemoLink: "https://hancok-beta.vercel.app/",
     githubLink: "https://github.com/fahimhossainmunna/hancok",
   },
@@ -62,7 +74,7 @@ const projectsData = [
     description:
       "A modern and responsive portfolio website built with Tailwind CSS, showcasing clean layouts, smooth UI, and adaptive design for all devices.",
     tags: ["Tailwind", "All"],
-    image: "/src/assets/developer.png",
+    image: developer,
     liveDemoLink: "https://fahimhossainmunna.github.io/Developer-Protfolio/",
     githubLink: "https://github.com/fahimhossainmunna/Developer-Protfolio",
   },
@@ -72,7 +84,7 @@ const projectsData = [
     description:
       "A modern and responsive portfolio website built with HTML CSS, showcasing clean layouts, smooth UI, and adaptive design for all devices.",
     tags: ["html css", "All"],
-    image: "/src/assets/figma.png",
+    image: figma,
     liveDemoLink: "https://fahimhossainmunna.github.io/figmaa/",
     githubLink: "https://github.com/fahimhossainmunna/figmaa",
   },
@@ -82,7 +94,7 @@ const projectsData = [
     description:
       "A blog platform developed using Bootstrap, ensuring a fully responsive layout and user-friendly interface.",
     tags: ["Bootstrap", "All"],
-    image: "/src/assets/projectOne.png",
+    image: projectOne,
     liveDemoLink: "https://fahimhossainmunna.github.io/creativePixel/",
     githubLink: "https://github.com/fahimhossainmunna/creativePixel",
   },
@@ -92,7 +104,7 @@ const projectsData = [
     description:
       "A blog platform developed using Bootstrap, ensuring a fully responsive layout and user-friendly interface.",
     tags: ["Bootstrap", "All"],
-    image: "/src/assets/shakib.png",
+    image: shakib,
     liveDemoLink: "https://fahimhossainmunna.github.io/protostar/",
     githubLink: "https://github.com/fahimhossainmunna/protostar",
   },
@@ -102,7 +114,7 @@ const projectsData = [
     description:
       "A blog platform developed using Bootstrap, ensuring a fully responsive layout and user-friendly interface.",
     tags: ["Bootstrap", "All"],
-    image: "/src/assets/glidex.png",
+    image: glidex,
     liveDemoLink: "https://fahimhossainmunna.github.io/Glidex/",
     githubLink: "https://github.com/fahimhossainmunna/Glidex",
   },
@@ -233,9 +245,7 @@ const Projects = () => {
         </div>
 
         {/* ✅ Animated Pagination Dots */}
-        <div className="custom-pagination flex justify-center mt-12 gap-3">
-          {/* Swiper injects dots here */}
-        </div>
+        <div className="custom-pagination flex justify-center mt-12 gap-3"></div>
 
         {/* Dot glow animation */}
         <style>
