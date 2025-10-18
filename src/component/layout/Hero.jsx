@@ -32,11 +32,14 @@ const CustomButton = ({ text, href, onClick, icon: Icon, className }) => {
 };
 
 const Hero = () => {
-  // Contact button click handler
+  // ✅ Scroll with offset for GetInTouch section
   const scrollToFooter = () => {
-    const footer = document.getElementById("footer"); // footer id dhorbo
-    if (footer) {
-      footer.scrollIntoView({ behavior: "smooth" });
+    const section = document.getElementById("get-in-touch");
+    if (section) {
+      const yOffset = -70; // 🧩 এখানে -100 মানে 100px উপরে থামবে
+      const y =
+        section.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
 
@@ -72,7 +75,7 @@ const Hero = () => {
                 <CustomButton
                   text="Contact Me"
                   icon={FaEnvelope}
-                  onClick={scrollToFooter} // ✅ Footer e scroll hobe
+                  onClick={scrollToFooter} // ✅ এখন GetInTouch e scroll hobe এবং একটু offset সহ থামবে
                 />
                 <CustomButton
                   text="Download CV"
@@ -94,9 +97,9 @@ const Hero = () => {
                 <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 animate-spin-slow"></div>
                 <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-[0_0_50px_rgba(124,58,237,0.6)] group-hover:scale-105 transition duration-500">
                   <Image 
-  imgSrc={fmunna} 
-  className="w-full h-full object-cover object-[center_15%]" 
-/>
+                    imgSrc={fmunna} 
+                    className="w-full h-full object-cover object-[center_15%]" 
+                  />
                 </div>
               </div>
             </motion.div>

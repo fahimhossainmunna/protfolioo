@@ -35,7 +35,7 @@ const Home = () => {
         <MyProject/>
       </Element>
 
-      <Element name="getintouch">
+      <Element id="get-in-touch">
         <GetInTouch />
       </Element>
 
