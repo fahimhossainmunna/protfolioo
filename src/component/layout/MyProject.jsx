@@ -16,6 +16,8 @@ import figma from "/src/assets/figma.png";
 import projectOne from "/src/assets/projectOne.png";
 import shakib from "/src/assets/shakib.png";
 import glidex from "/src/assets/glidex.png";
+import blockchain from "/src/assets/blockchain.png";
+import skilljob from "/src/assets/skilljob.png";
 
 const projectsData = [
   {
@@ -29,7 +31,7 @@ const projectsData = [
     githubLink: "https://github.com/fahimhossainmunna/reactOrebi",
   },
   {
-    id: 11,
+    id: 2,
     title: "Protostar – Personal Portfolio Showcase",
     description:
       "A modern portfolio website built with React showcasing professional projects, animation, and elegant responsive layouts.",
@@ -39,7 +41,7 @@ const projectsData = [
     githubLink: "https://github.com/fahimhossainmunna/reactOrebi",
   },
   {
-    id: 12,
+    id: 3,
     title: "UOMO – Fashion & Lifestyle Store",
     description:
       "A stylish React fashion website with interactive product sections, minimal UI, and smooth category transitions for all devices.",
@@ -49,7 +51,7 @@ const projectsData = [
     githubLink: "https://github.com/fahimhossainmunna/uomoReact",
   },
   {
-    id: 13,
+    id: 4,
     title: "Exclusive – Smart Gadget Store",
     description:
       "A feature-rich React e-commerce site offering seamless browsing, category filtering, and mobile-optimized performance.",
@@ -59,7 +61,7 @@ const projectsData = [
     githubLink: "https://github.com/fahimhossainmunna/raactEcom",
   },
   {
-    id: 14,
+    id: 5,
     title: "HANCOK – Gaming Community Website",
     description:
       "A responsive gaming-themed site built with React and Tailwind CSS, showcasing dark aesthetics and high-performance design.",
@@ -69,7 +71,28 @@ const projectsData = [
     githubLink: "https://github.com/fahimhossainmunna/hancok",
   },
   {
-    id: 2,
+    id: 6,
+    title: "Hyper Blockchain – Modern Digital Transaction Platform",
+    description:
+      "A modern blockchain transaction platform built with React, Tailwind, and Framer Motion — fast, secure, and fully responsive with a sleek futuristic UI.",
+    tags: ["React Js", "All"],
+    image: blockchain,
+    liveDemoLink: "https://block-chain-weld.vercel.app/",
+    githubLink: "https://github.com/fahimhossainmunna/blockChain",
+  },
+  {
+  id: 7,
+  title: "SkillJob – Smart Career & Hiring Platform",
+  description:
+    "A modern career and job listing platform built with React, Tailwind CSS, and Framer Motion — featuring smooth animations, responsive design, and elegant UI for job seekers and recruiters.",
+  tags: ["React Js", "All"],
+  image: skilljob, // তোমার SkillJob প্রজেক্টের image variable name এখানে দাও
+  liveDemoLink: "https://skill-job.vercel.app/",
+  githubLink: "https://github.com/fahimhossainmunna/skillJob",
+},
+
+  {
+    id: 8,
     title: "Developer Portfolio – Modern UI Design",
     description:
       "A clean, fast, and mobile-friendly developer portfolio built with Tailwind CSS to highlight skills and projects efficiently.",
@@ -79,7 +102,7 @@ const projectsData = [
     githubLink: "https://github.com/fahimhossainmunna/Developer-Protfolio",
   },
   {
-    id: 3,
+    id: 9,
     title: "Agency – Digital Design Landing Page",
     description:
       "A creative, responsive HTML & CSS landing page for a digital agency with modern animations and a professional layout.",
@@ -89,7 +112,7 @@ const projectsData = [
     githubLink: "https://github.com/fahimhossainmunna/figmaa",
   },
   {
-    id: 4,
+    id: 10,
     title: "Creative Pixel – Personal Blog Website",
     description:
       "A Bootstrap-based personal blog platform built with elegant UI, clean typography, and a fully responsive structure.",
@@ -99,7 +122,7 @@ const projectsData = [
     githubLink: "https://github.com/fahimhossainmunna/creativePixel",
   },
   {
-    id: 5,
+    id: 11,
     title: "Protostar – Portfolio Template",
     description:
       "A Bootstrap-based portfolio website template with smooth scrolling, vibrant color palette, and responsive design.",
@@ -109,7 +132,7 @@ const projectsData = [
     githubLink: "https://github.com/fahimhossainmunna/protostar",
   },
   {
-    id: 6,
+    id: 12,
     title: "Glidex – Multipurpose Landing Page",
     description:
       "A Bootstrap landing page built for startups and creative teams featuring flexible layouts and interactive sections.",
