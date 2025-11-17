@@ -8,8 +8,7 @@ import {
   FaCode,
   FaGraduationCap,
   FaDownload,
-  FaServer,
-  FaProjectDiagram 
+  FaServer, 
 } from "react-icons/fa";
 import { RiFolderChartLine } from "react-icons/ri";
 

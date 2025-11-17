@@ -37,8 +37,8 @@ const projectsData = [
       "A modern portfolio website built with React showcasing professional projects, animation, and elegant responsive layouts.",
     tags: ["React Js", "All"],
     image: protostarr,
-    liveDemoLink: "https://react-orebi-tau.vercel.app/",
-    githubLink: "https://github.com/fahimhossainmunna/reactOrebi",
+    liveDemoLink: "https://react-protostar.vercel.app/",
+    githubLink: "https://github.com/fahimhossainmunna/reactProtostar",
   },
   {
     id: 3,
