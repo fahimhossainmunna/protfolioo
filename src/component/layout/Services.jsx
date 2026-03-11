@@ -12,117 +12,120 @@ import {
 } from "react-icons/fa";
 
 const Services = () => {
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
-  };
+  const services = [
+    {
+      icon: <FaCode />,
+      color: "#ec4899", // Pink
+      title: "Frontend Development",
+      desc: "Building responsive, dynamic, and user-friendly interfaces using React and modern JavaScript.",
+    },
+    {
+      icon: <FaPaintBrush />,
+      color: "#3b82f6", // Blue
+      title: "UI/UX Design",
+      desc: "Crafting visually appealing and user-friendly layouts with smooth animations and clean design.",
+    },
+    {
+      icon: <FaMobileAlt />,
+      color: "#06b6d4", // Cyan
+      title: "Responsive Design",
+      desc: "Ensuring seamless user experience across desktops, tablets, and mobile devices.",
+    },
+    {
+      icon: <FaRocket />,
+      color: "#22c55e", // Green
+      title: "Performance Optimization",
+      desc: "Optimizing web apps for speed, SEO, and better Core Web Vitals to ensure top performance.",
+    },
+    {
+      icon: <FaServer />,
+      color: "#f97316", // Orange
+      title: "API Integration",
+      desc: "Connecting applications with RESTful APIs and GraphQL for smooth data flow and scalability.",
+    },
+    {
+      icon: <FaGithub />,
+      color: "#a855f7", // Purple
+      title: "Version Control",
+      desc: "Managing projects with Git & GitHub for collaboration, tracking changes, and teamwork efficiency.",
+    },
+  ];
 
   return (
-    <>
-      <section
-        id="services"
-        className="py-20 bg-gradient-to-br from-[#1e293b] via-[#0f172a] to-[#1e293b] text-white border-t border-gray-700"
-      >
-        <Container>
-          {/* Heading */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true }}
-            className="text-center mb-14"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-pink-500 mb-4 flex items-center justify-center gap-2">
-              <FaLaptopCode className="text-pink-500" /> My Services
-            </h2>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-              Here are the frontend services I provide to build modern web
-              experiences.
-            </p>
-          </motion.div>
+    <section id="services" className="py-24 bg-[#020617] text-white relative overflow-hidden">
+      {/* Background soft ambient glows */}
+      <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-pink-600/10 blur-[120px] rounded-full pointer-events-none" />
 
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {[
-              {
-                icon: <FaCode />,
-                color: "text-pink-500",
-                title: "Frontend Development",
-                desc: "Building responsive, dynamic, and user-friendly interfaces using React and modern JavaScript.",
-                hover:
-                  "hover:shadow-[0_0_25px_#ec4899] hover:bg-gradient-to-br hover:from-pink-500/10 hover:to-transparent",
-              },
-              {
-                icon: <FaPaintBrush />,
-                color: "text-blue-500",
-                title: "UI/UX Design",
-                desc: "Crafting visually appealing and user-friendly layouts with smooth animations and clean design.",
-                hover:
-                  "hover:shadow-[0_0_25px_#3b82f6] hover:bg-gradient-to-br hover:from-blue-500/10 hover:to-transparent",
-              },
-              {
-                icon: <FaMobileAlt />,
-                color: "text-cyan-400",
-                title: "Responsive Design",
-                desc: "Ensuring seamless user experience across desktops, tablets, and mobile devices.",
-                hover:
-                  "hover:shadow-[0_0_25px_#06b6d4] hover:bg-gradient-to-br hover:from-cyan-500/10 hover:to-transparent",
-              },
-              {
-                icon: <FaRocket />,
-                color: "text-green-500",
-                title: "Performance Optimization",
-                desc: "Optimizing web apps for speed, SEO, and better Core Web Vitals to ensure top performance.",
-                hover:
-                  "hover:shadow-[0_0_25px_#22c55e] hover:bg-gradient-to-br hover:from-green-500/10 hover:to-transparent",
-              },
-              {
-                icon: <FaServer />,
-                color: "text-orange-500",
-                title: "API Integration",
-                desc: "Connecting applications with RESTful APIs and GraphQL for smooth data flow and scalability.",
-                hover:
-                  "hover:shadow-[0_0_25px_#f97316] hover:bg-gradient-to-br hover:from-orange-500/10 hover:to-transparent",
-              },
-              {
-                icon: <FaGithub />,
-                color: "text-purple-500",
-                title: "Version Control",
-                desc: "Managing projects with Git & GitHub for collaboration, tracking changes, and teamwork efficiency.",
-                hover:
-                  "hover:shadow-[0_0_25px_#a855f7] hover:bg-gradient-to-br hover:from-purple-500/10 hover:to-transparent",
-              },
-            ].map((service, index) => (
-              <motion.div
-                key={index}
-                variants={cardVariants}
-                initial="hidden"
-                whileInView="visible"
-                transition={{ duration: 0.3 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.05 }} // শুধু card বড় হবে hover এ
-                className={`p-6 bg-[#181818] rounded-2xl shadow-lg transition-all duration-300 ease-out ${service.hover}`}
-              >
-                {/* শুধু icon hover এ move হবে */}
+      <Container>
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <FaLaptopCode className="text-pink-500 text-3xl md:text-4xl" />
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+              My <span className="text-pink-500">Services</span>
+            </h2>
+          </div>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
+            I leverage modern technologies to build high-performance web experiences.
+          </p>
+        </motion.div>
+
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10 }}
+              className="relative group h-full"
+            >
+              {/* Box Content */}
+              <div className="relative z-10 p-8 rounded-[2rem] bg-[#0f172a]/40 border border-white/5 backdrop-blur-md h-full flex flex-col transition-all duration-500 group-hover:border-white/20">
+                
+                {/* Neon Shadow on Hover */}
+                <div 
+                  className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-2xl rounded-[2rem]"
+                  style={{ backgroundColor: service.color }}
+                />
+
+                {/* Icon Section */}
                 <motion.div
-                  whileHover={{ y: -6, rotate: 8 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                  className={`text-4xl mb-4 ${service.color} inline-block cursor-pointer`}
+                  whileHover={{ rotate: 12, scale: 1.1 }}
+                  className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-gray-900/50 border border-white/10 shadow-xl"
+                  style={{ color: service.color }}
                 >
-                  {service.icon}
+                  <span className="text-3xl">{service.icon}</span>
                 </motion.div>
 
-                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                <p className="text-gray-400 text-sm md:text-base">
+                {/* Text Content */}
+                <h3 className="text-2xl font-bold mb-4 group-hover:text-pink-500 transition-colors duration-300">
+                  {service.title}
+                </h3>
+                <p className="text-gray-400 leading-relaxed mb-8 flex-grow">
                   {service.desc}
                 </p>
-              </motion.div>
-            ))}
-          </div>
-        </Container>
-     
-      </section>
-    </>
+
+                {/* Small Accent Line */}
+                <div 
+                  className="h-[2px] w-0 group-hover:w-full transition-all duration-500"
+                  style={{ backgroundColor: service.color }}
+                />
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </Container>
+    </section>
   );
 };
 
