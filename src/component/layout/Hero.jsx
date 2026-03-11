@@ -192,8 +192,8 @@ const Hero = () => {
               <span className="text-white/20 text-xs tracking-widest uppercase">Follow me</span>
               <div className="h-px w-8 bg-white/10" />
               {[
-                { icon: FaGithub, href: "#" },
-                { icon: FaLinkedin, href: "#" },
+                { icon: FaGithub, href: "https://github.com/fahimhossainmunna" },
+                { icon: FaLinkedin, href: "https://www.linkedin.com/in/fahim-hossain-munna/" },
               ].map(({ icon: Icon, href }, i) => (
                 
                  <a key={i}
