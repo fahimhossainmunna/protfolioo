@@ -165,8 +165,8 @@ const Navbar = () => {
               </div>
 
               
-               <a href="/Fahim_Hossain_CV.pdf"
-                download="Fahim_Hossain_CV.pdf"
+               <a href="/Fahim_CV.pdf"
+                download="Fahim_CV.pdf"
                 className="group relative flex items-center gap-2 px-4 py-2 rounded-full text-[13px] font-semibold text-white overflow-hidden transition-all duration-300 hover:shadow-[0_0_25px_rgba(34,211,238,0.3)]"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 opacity-90 group-hover:opacity-100 transition-opacity" />
@@ -233,8 +233,8 @@ const Navbar = () => {
                 ))}
                 <div className="mt-3 pt-3 border-t border-white/[0.06]">
                   
-                   <a href="/Fahim_Hossain_CV.pdf"
-                    download="Fahim_Hossain_CV.pdf"
+                   <a href="/Fahim_CV.pdf"
+                    download="Fahim_CV.pdf"
                     onClick={() => setMenuOpen(false)}
                     className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r from-cyan-500/80 to-purple-500/80 text-white font-semibold text-sm transition-all duration-300 hover:from-cyan-400 hover:to-purple-400"
                   >
@@ -303,8 +303,8 @@ const Navbar = () => {
 
                 {/* Download CV */}
                 
-                 <a href="/Fahim_Hossain_CV.pdf"
-                  download="Fahim_Hossain_CV.pdf"
+                 <a href="/Fahim_CV.pdf"
+                  download="Fahim_CV.pdf"
                   onClick={() => setSidebarOpen(false)}
                   className="text-white/90 font-medium transition-all duration-300 group hover:text-cyan-400 hover:scale-110 flex items-center gap-3"
                 >

@@ -32,10 +32,10 @@ const Home = () => {
       </Element>
 
       <Element name="myProject">
-        <MyProject/>
+        <MyProject />
       </Element>
 
-      <Element id="get-in-touch">
+      <Element name="contact">
         <GetInTouch />
       </Element>
 

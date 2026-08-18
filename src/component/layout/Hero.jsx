@@ -179,7 +179,7 @@ const Hero = () => {
               <CustomButton
                 text="Download CV"
                 icon={FaDownload}
-                href="/Fahim_CV.pdf"
+                href="/public/Fahim_CV.pdf"
                 variant="outline"
               />
             </motion.div>

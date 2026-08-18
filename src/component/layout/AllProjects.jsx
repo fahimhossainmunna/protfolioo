@@ -1,10 +1,6 @@
-import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Footer from "./Footer"; // ✅ Import Footer Component
 
 // ✅ Import all images
 import orebi from "/src/assets/orebi.png";
@@ -143,15 +139,20 @@ const projectsData = [
   },
 ];
 
-const MyProject = ({ setCurrentPage }) => {
+const AllProjects = () => {
   const [activeFilter, setActiveFilter] = useState("All");
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const filterButtons = [
     "All",
-    "html css",
-    "Bootstrap",
-    "Tailwind",
+    "Next Js",
     "React Js",
-    "JavaScript",
+    "Tailwind",
+    "Bootstrap",
+    "html css",
   ];
 
   const filteredProjects = projectsData.filter((project) =>
@@ -159,68 +160,57 @@ const MyProject = ({ setCurrentPage }) => {
   );
 
   return (
-    <section className="pt-1 pb-20 md:pt-28 md:pb-28 bg-gradient-to-br from-[#0b0f2c] via-[#20133a] to-[#2b0f46] text-white relative overflow-hidden">
-      {/* gradient aura background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,0,255,0.1),transparent_60%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(0,255,255,0.08),transparent_60%)]" />
+    <div className="bg-gradient-to-br from-[#0b0f2c] via-[#20133a] to-[#2b0f46] text-white min-h-screen">
+      <section className="pt-24 pb-16 relative overflow-hidden">
+        {/* Ambient Glows */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,0,255,0.12),transparent_60%)] pointer-events-none" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(0,255,255,0.08),transparent_60%)] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row md:items-center justify-between mb-10 md:mb-12">
-          <div className="text-left mb-6 md:mb-0">
-            <h2 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent mb-5 leading-tight break-words font-fahim">
-              My Projects
-            </h2>
-            <p className="text-[18px] text-gray-300 font-munna">
-              A collection of my recent front-end projects built with passion
-              and precision.
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Back Button */}
+          <div className="mb-8">
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 text-sm font-medium text-gray-300 hover:text-cyan-400 transition cursor-pointer"
+            >
+              &larr; Back to Home
+            </Link>
+          </div>
+
+          {/* Header & Filter */}
+          <div className="text-center mb-14">
+            <h1 className="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent mb-4 font-fahim">
+              All Projects
+            </h1>
+            <p className="text-gray-300 max-w-2xl mx-auto text-base md:text-lg mb-8 font-munna">
+              Explore the complete collection of web development and UI/UX projects.
             </p>
+
+            <div className="flex flex-wrap gap-3 justify-center">
+              {filterButtons.map((filter) => (
+                <button
+                  key={filter}
+                  onClick={() => setActiveFilter(filter)}
+                  className={`px-5 py-2 rounded-full text-sm font-medium transition duration-200 backdrop-blur-md border cursor-pointer ${
+                    activeFilter === filter
+                      ? "bg-gradient-to-r from-fuchsia-600 to-cyan-500 text-white shadow-lg shadow-fuchsia-500/30 border-transparent scale-105"
+                      : "bg-white/10 text-gray-300 border-white/20 hover:bg-white/20"
+                  }`}
+                >
+                  {filter}
+                </button>
+              ))}
+            </div>
           </div>
 
-          <div className="flex flex-wrap gap-2 md:gap-3 justify-start md:justify-end">
-            {filterButtons.map((filter) => (
-              <button
-                key={filter}
-                onClick={() => setActiveFilter(filter)}
-                className={`px-4 py-2 mb-15 rounded-full text-sm font-medium transition duration-200 ease-in-out backdrop-blur-md border cursor-pointer ${
-                  activeFilter === filter
-                    ? "bg-gradient-to-r from-fuchsia-600 to-cyan-500 text-white shadow-lg shadow-fuchsia-500/30 border-transparent scale-105"
-                    : "bg-white/10 text-gray-300 border-white/20 hover:bg-white/20"
-                }`}
-              >
-                {filter}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* ✅ Swiper Slider */}
-        <div className="relative flex items-center">
-          <button className="custom-prev absolute -left-10 md:-left-16 top-1/2 -translate-y-1/2 z-20 bg-gradient-to-r from-purple-600 to-pink-500 p-4 rounded-full shadow-lg shadow-purple-500/30 hover:shadow-pink-500/50 hover:scale-110 transition cursor-pointer">
-            ❮
-          </button>
-
-          <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
-            spaceBetween={30}
-            slidesPerView={1}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
-            pagination={{
-              clickable: true,
-              el: ".custom-pagination",
-            }}
-            navigation={{
-              nextEl: ".custom-next",
-              prevEl: ".custom-prev",
-            }}
-            breakpoints={{
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-            className="mySwiper w-full"
-          >
-            {filteredProjects.map((project) => (
-              <SwiperSlide key={project.id}>
-                <div className="bg-[#12142a]/80 border m-5 border-white/10 shadow-lg shadow-purple-800/20 rounded-xl p-5 flex flex-col justify-between h-[500px] transition-all duration-300 hover:shadow-pink-500/30 hover:-translate-y-2 w-full max-w-md mx-auto backdrop-blur-sm">
+          {/* Projects Grid or Empty State */}
+          {filteredProjects.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredProjects.map((project) => (
+                <div
+                  key={project.id}
+                  className="bg-[#12142a]/80 border border-white/10 shadow-lg shadow-purple-800/20 rounded-xl p-5 flex flex-col justify-between h-[490px] transition-all duration-300 hover:shadow-pink-500/30 hover:-translate-y-2 backdrop-blur-sm"
+                >
                   <div className="flex flex-col flex-grow">
                     <div className="h-48 overflow-hidden rounded-lg mb-4 bg-gray-800 flex items-center justify-center relative group">
                       <img
@@ -228,13 +218,13 @@ const MyProject = ({ setCurrentPage }) => {
                         alt={project.title}
                         className="w-full h-full object-cover transition-transform duration-700 ease-out transform origin-center group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500"></div>
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
                     </div>
 
                     <h3 className="text-xl font-bold text-white mb-2 line-clamp-2">
                       {project.title}
                     </h3>
-                    <p className="text-gray-400 mt-5 flex-grow text-base line-clamp-3">
+                    <p className="text-gray-400 mt-2 text-sm line-clamp-3">
                       {project.description}
                     </p>
                   </div>
@@ -244,7 +234,7 @@ const MyProject = ({ setCurrentPage }) => {
                       href={project.liveDemoLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-6 py-2 bg-gradient-to-r from-green-500 to-teal-400 text-white font-semibold rounded-lg shadow-md hover:shadow-teal-500/40 transition duration-150 text-sm flex-1 text-center"
+                      className="px-4 py-2 bg-gradient-to-r from-green-500 to-teal-400 text-white font-semibold rounded-lg shadow-md hover:shadow-teal-500/40 transition duration-150 text-sm flex-1 text-center"
                     >
                       Live Demo
                     </a>
@@ -252,63 +242,46 @@ const MyProject = ({ setCurrentPage }) => {
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-6 py-2 bg-gradient-to-r from-gray-700 to-gray-900 text-white font-semibold rounded-lg shadow-md hover:shadow-gray-500/30 transition duration-150 text-sm flex-1 text-center"
+                      className="px-4 py-2 bg-gradient-to-r from-gray-700 to-gray-900 text-white font-semibold rounded-lg shadow-md hover:shadow-gray-500/30 transition duration-150 text-sm flex-1 text-center"
                     >
                       GitHub
                     </a>
                   </div>
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+              ))}
+            </div>
+          ) : (
+            <div className="py-20 text-center text-gray-400">
+              <p className="text-xl font-medium">No projects found in this category.</p>
+              <p className="text-sm text-gray-500 mt-2">New projects will be added soon!</p>
+            </div>
+          )}
 
-          <button className="custom-next absolute -right-10 md:-right-16 top-1/2 -translate-y-1/2 z-20 bg-gradient-to-r from-cyan-500 to-purple-600 p-4 rounded-full shadow-lg shadow-cyan-500/30 hover:shadow-purple-500/50 hover:scale-110 transition cursor-pointer">
-            ❯
-          </button>
+          {/* ✅ Let's Work Together Banner */}
+          <div className="mt-20 p-8 md:p-12 rounded-2xl bg-gradient-to-r from-purple-900/40 via-[#1e1335]/70 to-cyan-900/30 border border-white/10 text-center backdrop-blur-md shadow-2xl relative overflow-hidden">
+            <div className="absolute -right-10 -bottom-10 w-48 h-48 bg-pink-500/10 rounded-full blur-3xl" />
+            <div className="absolute -left-10 -top-10 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl" />
+            
+            <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-3">
+              Have a Project in Mind?
+            </h2>
+            <p className="text-gray-300 max-w-xl mx-auto mb-6 text-sm md:text-base">
+              I am open for freelancing, collaboration, and exciting full-time/part-time web development opportunities.
+            </p>
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 px-7 py-3 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-fuchsia-600 to-cyan-500 shadow-lg shadow-fuchsia-500/25 hover:shadow-cyan-500/40 hover:scale-105 transition-all duration-300"
+            >
+              Get In Touch &rarr;
+            </Link>
+          </div>
         </div>
+      </section>
 
-        {/* ✅ Swiper Pagination */}
-        <div className="custom-pagination flex justify-center mt-12 gap-3"></div>
-
-       {/* ✅ View All Button */}
-<div className="flex justify-center mt-10">
-  <Link
-    to="/all-projects"
-    onClick={() => window.scrollTo(0, 0)}
-    className="group relative inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-base font-semibold text-white bg-gradient-to-r from-fuchsia-600 to-cyan-500 shadow-lg shadow-fuchsia-500/25 hover:shadow-cyan-500/40 hover:scale-105 transition-all duration-300 cursor-pointer"
-  >
-    <span>View All Projects</span>
-    <span className="transform transition-transform duration-300 group-hover:translate-x-1">
-      &rarr;
-    </span>
-  </Link>
-</div>
-
-        <style>
-          {`
-          .swiper-pagination-bullet {
-            background: linear-gradient(90deg, #a855f7, #06b6d4);
-            opacity: 0.4;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-          }
-          .swiper-pagination-bullet-active {
-            opacity: 1;
-            box-shadow: 0 0 10px #f0abfc, 0 0 20px #22d3ee;
-            transform: scale(1.3);
-            animation: pulse 1.2s infinite alternate;
-          }
-          @keyframes pulse {
-            from { box-shadow: 0 0 10px #f0abfc; }
-            to { box-shadow: 0 0 25px #22d3ee; }
-          }
-          `}
-        </style>
-      </div>
-    </section>
+      {/* ✅ Footer Component */}
+      <Footer />
+    </div>
   );
 };
 
-export default MyProject;
+export default AllProjects;
