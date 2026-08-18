@@ -15,6 +15,14 @@ import shakib from "/src/assets/shakib.png";
 import glidex from "/src/assets/glidex.png";
 import blockchain from "/src/assets/blockchain.png";
 import skilljob from "/src/assets/skilljob.png";
+import grocify from "/src/assets/grocify.png";
+import alina from "/src/assets/alina.png";
+import alfahim from "/src/assets/alfahim.png";
+import aboard from "/src/assets/aboard.png";
+import carRent from "/src/assets/carRent.png";
+import privateChat from "/src/assets/privateChat.png";
+import furniro from "/src/assets/furniro.png";
+import webFahim from "/src/assets/webFahim.png";
 
 const projectsData = [
   {
@@ -87,6 +95,7 @@ const projectsData = [
     liveDemoLink: "https://skill-job.vercel.app/",
     githubLink: "https://github.com/fahimhossainmunna/skillJob",
   },
+  
   {
     id: 8,
     title: "Developer Portfolio – Modern UI Design",
@@ -136,6 +145,86 @@ const projectsData = [
     image: glidex,
     liveDemoLink: "https://fahimhossainmunna.github.io/Glidex/",
     githubLink: "https://github.com/fahimhossainmunna/Glidex",
+  },
+  {
+    id: 13,
+    title: "GrOcify",
+    description:
+      "Tasty Organic Fruits & Veggies In Your City Bred for a high content of beneficial substances. Our products are all fresh healthy, and delivered straight to your door.",
+    tags: ["React Js", "All"],
+    image: grocify,
+    liveDemoLink: "https://grocify-smoky.vercel.app/",
+    githubLink: "https://github.com/fahimhossainmunna/grocify",
+  },
+  {
+    id: 14,
+    title: "Alina",
+    description:
+      "Crafting Beauty With Nature Where luxury meets purity. Dedicated to organic skincare rituals that nurture skin, elevate daily life, and protect our world.",
+    tags: ["Next Js", "All"],
+    image: alina,
+    liveDemoLink: "https://alina-beta.vercel.app/",
+    githubLink: "https://github.com/fahimhossainmunna/alina",
+  },
+  {
+    id: 15,
+    title: "Al-Fahim",
+    description:
+      "ELEGANCE&REFINEMENT Where timeless craftsmanship meets contemporary design. Experience luxury redefined.",
+    tags: ["Next Js", "All"],
+    image: alfahim,
+    liveDemoLink: "https://al-fahim-one.vercel.app/",
+    githubLink: "https://github.com/fahimhossainmunna/Al-Fahim",
+  },
+  {
+    id: 15,
+    title: "Aboard-Study",
+    description:
+      "Shape Your Global Future With Us. We simplify your study abroad journey — from university selection to visa approval. Join thousands of students studying in Malaysia, USA, UK, and beyond.",
+    tags: ["Next Js", "All"],
+    image: aboard,
+    liveDemoLink: "https://aboard-study.vercel.app/",
+    githubLink: "https://github.com/fahimhossainmunna/Aboard-Study",
+  },
+  {
+    id: 16,
+    title: "Car-Rent",
+    description:
+      "Drive Your Dreams With Premium Style.Experience the ultimate freedom with our luxury car rental service. Top-notch vehicles, seamless booking, and 24/7 support for your journey.",
+    tags: ["Next Js", "All"],
+    image: carRent,
+    liveDemoLink: "https://car-rent-phi-sooty.vercel.app/",
+    githubLink: "https://github.com/fahimhossainmunna/carRent",
+  },
+  {
+    id: 17,
+    title: "Private_Chat",
+    description:
+      ">private_chat A private, self-destructing chat room.",
+    tags: ["Next Js", "All"],
+    image: privateChat,
+    liveDemoLink: "https://chatapp-vert-omega.vercel.app/",
+    githubLink: "https://github.com/fahimhossainmunna/chatapp",
+  },
+  {
+    id: 18,
+    title: "Furniro",
+    description:
+      "Discover Our New Collection Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.",
+    tags: ["Next Js", "All"],
+    image: furniro,
+    liveDemoLink: "https://furniro-eight-eta.vercel.app/",
+    githubLink: "https://github.com/fahimhossainmunna/furniro",
+  },
+  {
+    id: 19,
+    title: "WebFahim",
+    description:
+      "Creating web produts,brands,and experience Hi! i'am Fahim - A passionate Frontend Devel",
+    tags: ["Next Js", "All"],
+    image: webFahim,
+    liveDemoLink: "https://next-protfolio-ivory.vercel.app/",
+    githubLink: "https://github.com/fahimhossainmunna/nextProtfolio",
   },
 ];
 
